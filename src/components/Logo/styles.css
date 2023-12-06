@@ -1,0 +1,9 @@
+.logo {
+	fill: var(--var-blue-dark);
+	stroke: none;
+}
+
+.logo--inverse {
+	fill: var(--var-white);
+	stroke: none;
+}

@@ -57,6 +57,9 @@ body {
 	/* secondary */
 	--var-red: hsl(0, 87%, 67%);
 
+	/* white */
+	--var-white: hsl(0, 0%, 100%);
+
 	/* greys */
 	--var-gray: hsl(0, 0%, 75%);
 	--var-violet-grey: hsl(257, 7%, 63%);
