@@ -3,17 +3,30 @@ import { useShortenedURLs } from '../../hooks/useShortenedURLs';
 import { ShortenURLForm } from '../ShortenURLForm';
 import { ShortenedURLCard } from '../ShortenedURLCard';
 
+import { getShortenedURL } from '../../service/shortenURL';
 export const Shortly = () => {
-	const { url, setURL, error, submitShortenURL } = useShortenURL();
+	const { url, setURL, error, setError } = useShortenURL();
 	const { shortenedURLs, setShortenedURLs } = useShortenedURLs();
 
-	const onSubmitShortenURL = async () => {
-		const shortenedURL = await submitShortenURL(url);
-		const updatedShortenedURLs = [...shortenedURLs, shortenedURL];
-		debugger;
-		setShortenedURLs(updatedShortenedURLs);
+	const onURLInput = (e) => {
+		const URLInput = e.target.value;
+		setURL(URLInput);
 	};
-	console.info(url, shortenedURLs);
+
+	const onSubmitShortenURL = async () => {
+		try {
+			setError();
+			const shortenedURL = await getShortenedURL(url);
+			const updatedShortenedURLs = [...shortenedURLs, shortenedURL];
+			setShortenedURLs(updatedShortenedURLs);
+		} catch (e) {
+			setError('Please add a link');
+			console.error('Could not fetch shortened URL \n', e);
+		} finally {
+		}
+	};
+
+	console.info(`url: ${url} error: ${error}`);
 	return (
 		<>
 			{/* <header>
@@ -25,6 +38,7 @@ export const Shortly = () => {
 				<section className='shorten-url'>
 					Shorten URL
 					<ShortenURLForm
+						onChange={onURLInput}
 						onSubmit={onSubmitShortenURL}
 						url={url}
 						error={error}

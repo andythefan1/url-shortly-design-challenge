@@ -1,12 +1,6 @@
 import './styles.css';
 
-export const URLInput = ({
-	value,
-	label,
-	placeholder,
-	errorMessage,
-	onChange,
-}) => {
+export const URLInput = ({ value, label, placeholder, isError, onChange }) => {
 	return (
 		<label className='url-input'>
 			<input

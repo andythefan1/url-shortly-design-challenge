@@ -1,11 +1,26 @@
 import { ShortenedURL } from '../models/ShortenedURL';
 
 import { fetchShortenedURL } from './mock';
-import { URLS } from '../utils/constants';
 
 export const getShortenedURL = async (url) => {
 	try {
-		const response = await fetchShortenedURL(url);
+		const shortenURLEndpoint =
+			process.env.REACT_APP_SHORTEN_URL_URI +
+			process.env.REACT_APP_SHORTEN_URL_ENDPOINT;
+
+		const options = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${process.env.REACT_APP_TINY_URL_API_KEY}`,
+			},
+			body: JSON.stringify({
+				url: url,
+			}),
+		};
+
+		const response = await fetch(shortenURLEndpoint, options);
+
 		const body = await response.json();
 
 		// check for valid response
@@ -14,9 +29,10 @@ export const getShortenedURL = async (url) => {
 			const originalURL = body.data.url;
 			return new ShortenedURL(originalURL, shortURL);
 		} else {
+			// throw internal error
 			throw new Error(body.errors);
 		}
 	} catch (error) {
-		throw new Error(error);
+		throw new Error(error.message);
 	}
 };
