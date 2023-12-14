@@ -1,5 +1,5 @@
 import './App.css';
-import { Shortly } from './components/Shortly';
+import { Shortly } from './containers/Shortly';
 
 function App() {
 	return <Shortly></Shortly>;

@@ -1,12 +1,3 @@
-import { ShortenedURL } from '../models/ShortenedURL';
-
-// mock view
-const shortenedURLArray = () => [
-	new ShortenedURL('https://www.reddit.com', 'https://1pt.co/cni6q'),
-	new ShortenedURL('https://www.reddit.com', 'https://1pt.co/cni6q'),
-	new ShortenedURL('https://www.reddit.com', 'https://1pt.co/cni6q'),
-];
-
 // mock shorten TinyURL responses
 export const fetchShortenedURL = (url) => {
 	const body = JSON.stringify(shortenValidResponse);

@@ -22,4 +22,14 @@ export class ShortenedURL {
 	get shortURL() {
 		return this.#shortURL;
 	}
+
+	// support JSON.stringify() on this object
+	toJSON() {
+		return { originalURL: this.#originalURL, shortURL: this.#shortURL };
+	}
+
+	// support creating an instance from JSON object
+	static fromJSON(json) {
+		return new ShortenedURL(json.originalURL, json.shortURL);
+	}
 }

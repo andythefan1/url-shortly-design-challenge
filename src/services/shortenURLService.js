@@ -1,6 +1,6 @@
 import { ShortenedURL } from '../models/ShortenedURL';
 
-import { fetchShortenedURL } from './mock';
+// import { fetchShortenedURL } from './mock';
 
 export const getShortenedURL = async (url) => {
 	try {
@@ -20,7 +20,6 @@ export const getShortenedURL = async (url) => {
 		};
 
 		const response = await fetch(shortenURLEndpoint, options);
-
 		const body = await response.json();
 
 		// check for valid response
@@ -30,9 +29,11 @@ export const getShortenedURL = async (url) => {
 			return new ShortenedURL(originalURL, shortURL);
 		} else {
 			// throw internal error
-			throw new Error(body.errors);
+			throw new Error(`Internal error: ${body.errors}`);
 		}
 	} catch (error) {
 		throw new Error(error.message);
 	}
 };
+
+export const getShortenedURLs = async () => {};
