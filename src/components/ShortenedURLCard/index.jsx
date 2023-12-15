@@ -1,8 +1,8 @@
-import { SubmitButton } from '../SubmitButton';
+import { Button } from '../Button';
 
 import './styles.css';
 
-export const ShortenedURLCard = ({ header, body }) => {
+export const ShortenedURLCard = ({ header, body, onClick }) => {
 	return (
 		<div className='shorten-url-card'>
 			<div className='shorten-url-card-header'>
@@ -10,7 +10,7 @@ export const ShortenedURLCard = ({ header, body }) => {
 			</div>
 			<hr />
 			<div className='shorten-url-card-body'>{body}</div>
-			<SubmitButton>Copy</SubmitButton>
+			<Button onClick={() => onClick(header)}>Copy</Button>
 		</div>
 	);
 };

@@ -2,9 +2,9 @@ import './styles.css';
 
 export const URLInput = ({ value, label, placeholder, isError, onChange }) => {
 	return (
-		<label className='url-input'>
+		<label className={`url-input-label ${isError ? 'error' : ''}`}>
 			<input
-				className='url-input'
+				className={`url-input ${isError ? 'error' : ''}`}
 				onChange={onChange}
 				type='url'
 				value={value}

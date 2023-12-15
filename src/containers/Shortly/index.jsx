@@ -3,29 +3,45 @@ import { useShortenedURLs } from '../../hooks/useShortenedURLs';
 import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
 
-import { getShortenedURL } from '../../services/shortenURLService';
+import './styles.css';
+
 export const Shortly = () => {
-	const { url, setURL, error, setError } = useShortenURL();
+	const { url, setURL, error, fetchShortenedURL } = useShortenURL();
 	const { shortenedURLs, setShortenedURLs } = useShortenedURLs();
 
-	const onURLInput = (e) => {
+	const handleURLInput = (e) => {
 		const URLInput = e.target.value;
 		setURL(URLInput);
 	};
 
-	const onSubmitShortenURL = async () => {
+	const handleSubmitURL = async () => {
 		try {
-			setError();
-			const shortenedURL = await getShortenedURL(url);
+			const shortenedURL = await fetchShortenedURL(url);
 			const updatedShortenedURLs = [shortenedURL, ...shortenedURLs];
 			setShortenedURLs(updatedShortenedURLs);
-		} catch (e) {
-			setError('Please add a link');
-			console.error('Could not fetch shortened URL \n', e);
+			setURL('');
+			console.info(`handleSubmitURL: ${url}`);
+		} catch (error) {
+			console.error('Could not fetch shortened URL \n', error);
 		}
 	};
 
-	console.info('shortenedURLs', shortenedURLs);
+	const handleClearAllURLs = () => {
+		setShortenedURLs([]);
+	};
+
+	const handleCopyURL = async (value) => {
+		try {
+			if (value.length > 0) {
+				await navigator.clipboard.writeText(value);
+			}
+		} catch (error) {
+			console.info(
+				'Clipboard was empty or there was a problem with browser permission'
+			);
+		}
+	};
+
 	return (
 		<>
 			{/* <header>
@@ -37,19 +53,21 @@ export const Shortly = () => {
 				<section className='shorten-url'>
 					Shorten URL
 					<ShortenURLForm
-						onChange={onURLInput}
-						onSubmit={onSubmitShortenURL}
+						onChange={handleURLInput}
+						onSubmit={handleSubmitURL}
 						url={url}
 						error={error}
 					></ShortenURLForm>
-					<div>
+					<div className='shorten-url-list'>
 						{shortenedURLs.map((shortenedURL, i) => (
 							<ShortenedURLCard
 								key={i}
 								header={shortenedURL.originalURL}
 								body={shortenedURL.shortURL}
+								onClick={handleCopyURL}
 							></ShortenedURLCard>
 						))}
+						<button onClick={handleClearAllURLs}>clear all</button>
 					</div>
 				</section>
 				{/* <section>MoreInfo</section>

@@ -1,13 +1,68 @@
-/* LAYOUT */
-header,
-section,
-footer {
-	width: 100%;
-	border-bottom: solid 1px black;
-}
+/* 
 
-footer {
-	background-color: var(--var-violet-dark);
-}
+# LAYOUT
+- mobile: 375px
+- desktop: 1440px  
 
-/* COMPONENTS */
+# COLORS
+## Primary
+### Cyan
+	- Submit buttons, CTA buttons
+	- hover states: social icons
+
+## Secondary
+
+
+## Neutrals
+### white
+	- footer: header text, social icons
+### gray
+	- footer: regular text
+
+## Shades
+### dark violet
+- Footer (background)
+
+# TYPOGRAPHY 
+## 16, bold
+- footer: header
+## 15, medium
+- Footer: regular text, 
+## Body Copy
+- Font size: 18px
+
+### Fonts
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 500, 700
+
+## Icons
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/
+
+body {
+	margin: 0;
+	font-family: Poppins, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* COLOR SYSTEM */
+	/* primary */
+	--var-cyan: hsl(180, 665, 49%);
+	--var-violet-dark: hsl(257, 27%, 26%);
+
+	/* secondary */
+	--var-red: hsl(0, 87%, 67%);
+
+	/* white */
+	--var-white: hsl(0, 0%, 100%);
+
+	/* greys */
+	--var-gray: hsl(0, 0%, 75%);
+	--var-violet-grey: hsl(257, 7%, 63%);
+
+	/* shades */
+	--var-blue-dark: hsl(255, 11%, 22%);
+	--var-violet-dark: hsl(260, 8%, 14%);
+}

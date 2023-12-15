@@ -7,7 +7,6 @@ export const useShortenedURLs = (urls) => {
 
 	useEffect(() => {
 		setURLList(shortenedURLs);
-		console.info('localStorage: ', getURLList());
 	}, [shortenedURLs]);
 
 	return { shortenedURLs, setShortenedURLs };
