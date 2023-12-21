@@ -4,7 +4,7 @@ import './styles.css';
 
 export const ShortenedURLCard = ({ header, body, onClick }) => {
 	return (
-		<div className='shorten-url-card'>
+		<div className='card shorten-url-card'>
 			<div className='shorten-url-card-header'>
 				<p>{header}</p>
 			</div>

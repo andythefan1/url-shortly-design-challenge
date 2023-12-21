@@ -1,34 +1,15 @@
 /* 
-
-# LAYOUT
+# STYLE GUIDE 
+## LAYOUT
 - mobile: 375px
 - desktop: 1440px  
 
-# COLORS
-## Primary
-### Cyan
-	- Submit buttons, CTA buttons
-	- hover states: social icons
-
-## Secondary
-
-
-## Neutrals
-### white
-	- footer: header text, social icons
-### gray
-	- footer: regular text
-
-## Shades
-### dark violet
-- Footer (background)
-
-# TYPOGRAPHY 
-## 16, bold
+## TYPOGRAPHY 
+### 16, bold
 - footer: header
-## 15, medium
+### 15, medium
 - Footer: regular text, 
-## Body Copy
+### Body Copy
 - Font size: 18px
 
 ### Fonts
@@ -43,26 +24,52 @@
 
 body {
 	margin: 0;
-	font-family: Poppins, sans-serif;
+	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
 	/* COLOR SYSTEM */
-	/* primary */
-	--var-cyan: hsl(180, 665, 49%);
-	--var-violet-dark: hsl(257, 27%, 26%);
+	/* primary
+   - cyan: Submit and copied buttons, CTA buttons, footer buttons and links (hover) 
+   - violet: CTA bg, URL form bg, mobile nav menu bg
+  */
+	--var-cyan: hsl(180, 66%, 49%);
+	--var-violet: hsl(257, 26%, 33%);
+	/* --var-violet: hsl(257, 27%, 26%); */
 
 	/* secondary */
 	--var-red: hsl(0, 87%, 67%);
 
-	/* white */
+	/* neutrals */
 	--var-white: hsl(0, 0%, 100%);
-
-	/* greys */
 	--var-gray: hsl(0, 0%, 75%);
-	--var-violet-grey: hsl(257, 7%, 63%);
+	--var-violet-greyish: hsl(257, 8%, 63%);
+
+	/* tints 
+    - button (hover)
+  */
+	--var-cyan-light: hsl(180, 56%, 75%);
+	--var-blue-light: hsl(225, 32%, 95%);
 
 	/* shades */
-	--var-blue-dark: hsl(255, 11%, 22%);
 	--var-violet-dark: hsl(260, 8%, 14%);
+	--var-blue-dark: hsl(255, 11%, 22%);
+
+	/* TYPOGRAPHY */
+	font-family: Poppins, sans-serif;
+
+	/* 18px/16px = 1.125 */
+	font-size: 112.5%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
 }

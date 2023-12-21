@@ -3,7 +3,7 @@ import { Button } from '../Button';
 
 import './styles.css';
 
-export const ShortenURLForm = ({ onChange, onSubmit, url, error }) => {
+export const ShortenURLForm = ({ onChange, label, onSubmit, url, error }) => {
 	const handleSubmitClick = (e) => {
 		e.preventDefault();
 		onSubmit();
@@ -18,7 +18,7 @@ export const ShortenURLForm = ({ onChange, onSubmit, url, error }) => {
 				onChange={onChange}
 				value={url}
 			></URLInput>
-			<Button onClick={handleSubmitClick}>Shorten it!</Button>
+			<Button onClick={handleSubmitClick}>{label}</Button>
 		</form>
 	);
 };

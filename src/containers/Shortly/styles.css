@@ -1,0 +1,55 @@
+/* LAYOUT */
+.shortly-app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+footer {
+	background-color: var(--var-violet-dark);
+}
+
+section.more-info {
+	background-color: var(--var-blue-light);
+}
+
+section.call-to-action {
+	background-color: var(--var-violet);
+	background-repeat: repeat-x;
+	background-image: url('/src/assets/bg-boost-desktop.svg');
+}
+
+.container-centered {
+	margin: 0 auto;
+	max-width: 1110px;
+}
+
+.grid {
+	display: grid;
+	column-gap: 1rem;
+	row-gap: 1rem;
+}
+
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* COMPONENTS */
+.card {
+	background-color: var(--var-white);
+	border-radius: 6px;
+}
+
+nav {
+	display: flex;
+	font-weight: bold;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	font-size: 0.9375rem;
+}
