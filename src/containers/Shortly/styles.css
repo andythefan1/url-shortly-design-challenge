@@ -35,6 +35,7 @@ section.call-to-action {
 }
 
 /* COMPONENTS */
+
 .card {
 	background-color: var(--var-white);
 	border-radius: 6px;
@@ -45,11 +46,7 @@ nav {
 	font-weight: bold;
 }
 
-.nav-bar {
-	display: flex;
-	justify-content: space-between;
-}
-
-.nav-link {
-	font-size: 0.9375rem;
+/* GENERAL */
+.landing-aside {
+	overflow-x: hidden;
 }

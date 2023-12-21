@@ -4,6 +4,7 @@ import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
 import { Logo } from '../../components/Logo';
 import { Button } from '../../components/Button';
+import { AppHeader } from '../AppHeader';
 
 import './styles.css';
 import { ReactComponent as LandingImage } from '../../assets/illustration-working.svg';
@@ -48,29 +49,8 @@ export const Shortly = () => {
 	return (
 		<div className='shortly-app'>
 			<header>
-				<div className='nav-bar container-centered'>
-					<nav>
-						<Logo></Logo>
-						<ul>
-							<li>
-								<a className='nav-link' href='/'>
-									Features
-								</a>
-								<a className='nav-link' href='/'>
-									Pricing
-								</a>
-								<a className='nav-link' href='/'>
-									Resources
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<nav>
-						<a className='nav-link' href='/'>
-							Login
-						</a>
-						<Button>Sign up</Button>
-					</nav>
+				<div className='container-centered'>
+					<AppHeader></AppHeader>
 				</div>
 			</header>
 			<main>
@@ -84,7 +64,7 @@ export const Shortly = () => {
 							</p>
 							<Button>Get Started</Button>
 						</div>
-						<div className=''>
+						<div className='landing-aside'>
 							<LandingImage></LandingImage>
 						</div>
 					</div>

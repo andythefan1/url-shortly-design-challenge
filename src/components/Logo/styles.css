@@ -1,6 +1,9 @@
 .logo {
 	fill: var(--var-blue-dark);
 	stroke: none;
+
+	width: 120px;
+	height: 32.67px;
 }
 
 .logo--inverse {

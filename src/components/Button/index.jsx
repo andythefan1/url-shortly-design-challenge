@@ -1,6 +1,8 @@
-export const Button = ({ onClick, isDisabled, children }) => {
+import './styles.css';
+
+export const Button = ({ isRounded, onClick, isDisabled, children }) => {
 	return (
-		<button onClick={onClick} disabled={isDisabled}>
+		<button className='' onClick={onClick} disabled={isDisabled}>
 			{children}
 		</button>
 	);

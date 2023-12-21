@@ -1,2 +1,6 @@
 /* states: normal, disabled, hover, clicked */
 /* styles: default, rounded, */
+
+button {
+	font-size: 2em;
+}

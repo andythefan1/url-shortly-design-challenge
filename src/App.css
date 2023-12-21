@@ -22,7 +22,7 @@
 - [Ionicons](https://ionicons.com)
 */
 
-body {
+html {
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
@@ -58,12 +58,20 @@ body {
 	/* TYPOGRAPHY */
 	font-family: Poppins, sans-serif;
 
-	/* 18px/16px = 1.125 */
-	font-size: 112.5%;
+	/* 10px/16px = 0.625 */
+	font-size: 62.5%;
 }
 
-a {
+a,
+a:visited,
+a:active,
+a:focus {
+	color: var(--var-violet-greyish);
 	text-decoration: none;
+}
+
+button {
+	font-size: inherit;
 }
 
 ul,
