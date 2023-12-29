@@ -1,6 +1,20 @@
-/* states: normal, disabled, hover, clicked */
-/* styles: default, rounded, */
-
 button {
-	font-size: 2em;
+	font-weight: 700;
+	color: var(--var-white);
+	background-color: var(--var-cyan);
+	border: none;
+	border-radius: 10px;
+	padding: 8px 24px;
+}
+
+button.primary {
+	font-size: 2rem;
+	padding: 1.4rem 4rem;
+}
+
+button:active,
+button:focus,
+button:hover,
+:disabled {
+	background-color: var(--var-cyan-light);
 }

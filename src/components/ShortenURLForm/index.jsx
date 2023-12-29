@@ -10,7 +10,7 @@ export const ShortenURLForm = ({ onChange, label, onSubmit, url, error }) => {
 	};
 
 	return (
-		<form className='submit-url-form'>
+		<form className='submit-url-form rounded'>
 			<URLInput
 				placeholder='Shorten a link here...'
 				label={error}
@@ -18,7 +18,9 @@ export const ShortenURLForm = ({ onChange, label, onSubmit, url, error }) => {
 				onChange={onChange}
 				value={url}
 			></URLInput>
-			<Button onClick={handleSubmitClick}>{label}</Button>
+			<Button isPrimary onClick={handleSubmitClick}>
+				{label}
+			</Button>
 		</form>
 	);
 };

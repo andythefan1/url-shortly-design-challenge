@@ -1,4 +1,15 @@
 .submit-url-form {
 	display: flex;
-	flex-direction: column;
+	background-color: var(--var-violet-dark);
+	background-image: url(../../assets/bg-shorten-desktop.svg);
+	padding: 5.2rem 6.4rem;
+	gap: 2.4rem;
+}
+
+.submit-url-form button {
+	padding: 1.6rem 4rem;
+	flex: 0 0 fit-content;
+}
+
+.url-input {
 }

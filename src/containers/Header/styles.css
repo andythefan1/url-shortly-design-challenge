@@ -1,0 +1,39 @@
+.nav-bar {
+	font-size: 1.5rem;
+	padding: 4.8rem 0;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+a.nav-link {
+	color: var(--var-violet-greyish);
+}
+
+a.nav-link.inverted {
+}
+
+a.nav-link:active,
+a.nav-link:hover {
+	color: var(--var-blue-dark);
+}
+
+a.inverted.nav-link:active,
+a.inverted.nav-link:hover {
+}
+
+.nav-bar-col {
+}
+
+.nav-link-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	display: flex;
+	column-gap: 3.2rem;
+	row-gap: 3.2rem;
+}
+
+.nav-bar .logo {
+	padding-right: 1.2rem;
+}

@@ -1,0 +1,104 @@
+/* 
+# STYLE GUIDE 
+## LAYOUT
+- mobile: 375px
+- desktop: 1440px  
+
+## SPACING
+- 
+
+## TYPOGRAPHY 
+### Fonts
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+
+### Font weights: 
+- 500, 700
+
+### Line heights:
+- 36px
+
+### Letter spacing:
+- -2px
+- 0.15px
+
+### Font sizes
+
+
+
+## Icons
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+*/
+
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* COLOR SYSTEM */
+	/* primary
+   - cyan: Submit and copied buttons, CTA buttons, footer buttons and links (hover) 
+   - violet: CTA bg, URL form bg, mobile nav menu bg
+  */
+	--var-cyan: hsl(180, 66%, 49%);
+	--var-violet: hsl(257, 26%, 33%);
+
+	/* secondary */
+	--var-red: hsl(0, 87%, 67%);
+
+	/* neutrals */
+	--var-white: hsl(0, 0%, 100%);
+	--var-gray: hsl(0, 0%, 75%);
+	--var-violet-greyish: hsl(257, 8%, 63%);
+
+	/* tints 
+    - button (hover)
+  */
+	--var-cyan-light: hsl(180, 56%, 75%);
+	--var-blue-light: hsl(225, 32%, 95%);
+
+	/* shades */
+	--var-violet-dark: hsl(257, 27%, 26%);
+	--var-violet-darkest: hsl(260, 8%, 14%);
+	--var-blue-dark: hsl(255, 11%, 21%);
+
+	/* TYPOGRAPHY */
+	font-family: Poppins, sans-serif;
+
+	/* 10px/16px = 0.625 */
+	font-size: 62.5%;
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+	color: var(--var-violet-greyish);
+	text-decoration: none;
+}
+
+button {
+	font-size: inherit;
+}
+
+ul,
+li {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	padding: 0;
+	margin: 0 0 0.4rem 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	color: var(--var-violet-greyish);
+}

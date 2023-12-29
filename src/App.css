@@ -1,83 +1,76 @@
-/* 
-# STYLE GUIDE 
-## LAYOUT
-- mobile: 375px
-- desktop: 1440px  
-
-## TYPOGRAPHY 
-### 16, bold
-- footer: header
-### 15, medium
-- Footer: regular text, 
-### Body Copy
-- Font size: 18px
-
-### Fonts
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 500, 700
-
-## Icons
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
-*/
-
-html {
-	margin: 0;
-	padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	/* COLOR SYSTEM */
-	/* primary
-   - cyan: Submit and copied buttons, CTA buttons, footer buttons and links (hover) 
-   - violet: CTA bg, URL form bg, mobile nav menu bg
-  */
-	--var-cyan: hsl(180, 66%, 49%);
-	--var-violet: hsl(257, 26%, 33%);
-	/* --var-violet: hsl(257, 27%, 26%); */
-
-	/* secondary */
-	--var-red: hsl(0, 87%, 67%);
-
-	/* neutrals */
-	--var-white: hsl(0, 0%, 100%);
-	--var-gray: hsl(0, 0%, 75%);
-	--var-violet-greyish: hsl(257, 8%, 63%);
-
-	/* tints 
-    - button (hover)
-  */
-	--var-cyan-light: hsl(180, 56%, 75%);
-	--var-blue-light: hsl(225, 32%, 95%);
-
-	/* shades */
-	--var-violet-dark: hsl(260, 8%, 14%);
-	--var-blue-dark: hsl(255, 11%, 22%);
-
-	/* TYPOGRAPHY */
-	font-family: Poppins, sans-serif;
-
-	/* 10px/16px = 0.625 */
-	font-size: 62.5%;
+/* LAYOUT */
+.shortly-app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 144rem;
+	margin: 0 auto;
+	color: var(--var-blue-dark);
 }
 
-a,
-a:visited,
-a:active,
-a:focus {
-	color: var(--var-violet-greyish);
-	text-decoration: none;
+header,
+main,
+footer {
+	max-width: 144rem;
 }
 
-button {
-	font-size: inherit;
+footer {
+	background-color: var(--var-violet-darkest);
 }
 
-ul,
-li {
-	list-style: none;
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
+section.landing {
+	height: 66.4rem;
+}
+
+.shorten-url {
+	transform: translateY(-25%);
+}
+
+section.more-info {
+	background-color: var(--var-blue-light);
+}
+
+section.call-to-action {
+	background-color: var(--var-violet);
+	background-repeat: repeat-x;
+	background-image: url('/src/assets/bg-boost-desktop.svg');
+}
+
+.container-centered {
+	margin: 0 auto;
+	max-width: 1110px;
+}
+
+/* .grid {
+	display: grid;
+}
+
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
+} */
+
+/* COMPONENTS */
+
+.rounded {
+	border-radius: 10px;
+}
+
+.rounded-large {
+	border-radius: 28px;
+}
+
+.card {
+	background-color: var(--var-white);
+	border-radius: 6px;
+}
+
+nav {
+	display: flex;
+	font-weight: 700;
+}
+
+.landing-background {
+	position: absolute;
+	top: 18rem;
+	right: -13rem;
 }

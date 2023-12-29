@@ -4,10 +4,10 @@ import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
 import { Logo } from '../../components/Logo';
 import { Button } from '../../components/Button';
-import { AppHeader } from '../AppHeader';
+import { Header } from '../Header';
+import { Hero } from '../Hero';
 
-import './styles.css';
-import { ReactComponent as LandingImage } from '../../assets/illustration-working.svg';
+import { ReactComponent as LandingBackground } from '../../assets/illustration-working.svg';
 
 export const Shortly = () => {
 	const { url, setURL, error, fetchShortenedURL } = useShortenURL();
@@ -35,6 +35,7 @@ export const Shortly = () => {
 	};
 
 	const handleCopyURL = async (value) => {
+		debugger;
 		try {
 			if (value.length > 0) {
 				await navigator.clipboard.writeText(value);
@@ -50,27 +51,20 @@ export const Shortly = () => {
 		<div className='shortly-app'>
 			<header>
 				<div className='container-centered'>
-					<AppHeader></AppHeader>
+					<Header></Header>
 				</div>
 			</header>
 			<main>
 				<section className='landing'>
-					<div className='container-centered grid grid--2-cols'>
-						<div className=''>
-							<h1>More than just shorter links</h1>
-							<p>
-								Build your brand's recognition and get detailed insights on how
-								your links are performing.
-							</p>
-							<Button>Get Started</Button>
-						</div>
-						<div className='landing-aside'>
-							<LandingImage></LandingImage>
-						</div>
+					<div className='landing-background'>
+						<LandingBackground></LandingBackground>
+					</div>
+					<div className='container-centered'>
+						<Hero></Hero>
 					</div>
 				</section>
-				<section className='shorten-url'>
-					<div className='container-centered'>
+				<section className=''>
+					<div className='shorten-url container-centered'>
 						<ShortenURLForm
 							onChange={handleURLInput}
 							onSubmit={handleSubmitURL}
@@ -80,12 +74,15 @@ export const Shortly = () => {
 						></ShortenURLForm>
 						<div className='shorten-url-list'>
 							{shortenedURLs.map((shortenedURL, i) => (
-								<ShortenedURLCard
-									key={i}
-									header={shortenedURL.originalURL}
-									body={shortenedURL.shortURL}
-									onClick={handleCopyURL}
-								></ShortenedURLCard>
+								<ShortenedURLCard key={i} header={shortenedURL.originalURL}>
+									{shortenedURL.shortURL}
+									<Button
+										isRounded
+										onClick={() => handleCopyURL(shortenedURL.shortURL)}
+									>
+										Copy
+									</Button>
+								</ShortenedURLCard>
 							))}
 							<button onClick={handleClearAllURLs}>clear all</button>
 						</div>
@@ -128,7 +125,7 @@ export const Shortly = () => {
 				<section className='call-to-action'>
 					<div className='container-centered'>
 						<h2>Boost your links today</h2>
-						<Button>Get Started</Button>
+						<Button isRounded>Get Started</Button>
 					</div>
 				</section>
 			</main>

@@ -1,8 +1,21 @@
 import './styles.css';
 
-export const Button = ({ isRounded, onClick, isDisabled, children }) => {
+export const Button = ({
+	isPrimary,
+	isRounded,
+	onClick,
+	isDisabled,
+	children,
+}) => {
+	let classList = '';
+	if (isPrimary) {
+		classList += 'primary ';
+	}
+	if (isRounded) {
+		classList += 'rounded-large';
+	}
 	return (
-		<button className='' onClick={onClick} disabled={isDisabled}>
+		<button className={classList} onClick={onClick} disabled={isDisabled}>
 			{children}
 		</button>
 	);

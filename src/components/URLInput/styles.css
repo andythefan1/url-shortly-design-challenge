@@ -1,6 +1,12 @@
 .url-input {
-	display: flex;
-	flex-direction: column;
+	padding: 1.4rem 3.2rem;
+	font-size: 2rem;
+	flex: 1 0 auto;
+}
+
+.url-input::placeholder {
+	opacity: 50%;
+	color: var(--var-blue-dark);
 }
 
 .url-input.error::placeholder {
@@ -13,6 +19,8 @@
 }
 
 .url-input-label {
+	display: flex;
+	flex: 1 1;
 }
 
 .url-input-label.error {
