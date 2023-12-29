@@ -1,3 +1,18 @@
 .shorten-url-card {
-	border: 1px solid grey;
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+}
+
+.shorten-url-card-body {
+	display: flex;
+	column-gap: 2.4rem;
+}
+
+.shorten-url-card-body .button {
+	font-size: 1.5rem;
+}
+
+a.shorten-url-link {
+	color: var(--var-cyan);
 }

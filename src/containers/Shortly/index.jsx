@@ -35,7 +35,6 @@ export const Shortly = () => {
 	};
 
 	const handleCopyURL = async (value) => {
-		debugger;
 		try {
 			if (value.length > 0) {
 				await navigator.clipboard.writeText(value);
@@ -47,6 +46,7 @@ export const Shortly = () => {
 		}
 	};
 
+	console.log('shortenedURLs: ', shortenedURLs);
 	return (
 		<div className='shortly-app'>
 			<header>
@@ -63,7 +63,7 @@ export const Shortly = () => {
 						<Hero></Hero>
 					</div>
 				</section>
-				<section className=''>
+				<section className='shorten-url'>
 					<div className='shorten-url container-centered'>
 						<ShortenURLForm
 							onChange={handleURLInput}
@@ -74,17 +74,14 @@ export const Shortly = () => {
 						></ShortenURLForm>
 						<div className='shorten-url-list'>
 							{shortenedURLs.map((shortenedURL, i) => (
-								<ShortenedURLCard key={i} header={shortenedURL.originalURL}>
-									{shortenedURL.shortURL}
-									<Button
-										isRounded
-										onClick={() => handleCopyURL(shortenedURL.shortURL)}
-									>
-										Copy
-									</Button>
-								</ShortenedURLCard>
+								<ShortenedURLCard
+									key={i}
+									header={shortenedURL.originalURL}
+									body={shortenedURL.shortURL}
+									onClick={handleCopyURL}
+								></ShortenedURLCard>
 							))}
-							<button onClick={handleClearAllURLs}>clear all</button>
+							<Button onClick={handleClearAllURLs}>clear all</Button>
 						</div>
 					</div>
 				</section>

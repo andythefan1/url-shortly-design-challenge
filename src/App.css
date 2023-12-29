@@ -20,10 +20,19 @@ footer {
 
 section.landing {
 	height: 66.4rem;
+	position: relative;
+	overflow: hidden;
 }
 
-.shorten-url {
+section.shorten-url {
+	background-color: var(--var-blue-light);
+}
+
+.shorten-url.container-centered {
 	transform: translateY(-25%);
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.4rem;
 }
 
 section.more-info {
@@ -51,6 +60,8 @@ section.call-to-action {
 
 /* COMPONENTS */
 
+/* GENERAL STYLES */
+
 .rounded {
 	border-radius: 10px;
 }
@@ -61,7 +72,8 @@ section.call-to-action {
 
 .card {
 	background-color: var(--var-white);
-	border-radius: 6px;
+	border-radius: 5px;
+	padding: 1.8rem 3.2rem;
 }
 
 nav {
@@ -71,6 +83,12 @@ nav {
 
 .landing-background {
 	position: absolute;
-	top: 18rem;
+	top: 3rem;
 	right: -13rem;
+}
+
+.shorten-url-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.6rem;
 }
