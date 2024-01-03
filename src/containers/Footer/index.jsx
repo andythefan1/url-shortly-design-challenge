@@ -8,40 +8,97 @@ import './styles.css';
 
 export const Footer = () => {
 	return (
-		<div>
-			{' '}
+		<div className='footer'>
 			<Logo inverse />
 			<div className='footer-links'>
-				<div className='footer-link-container'>
-					<div className='footer-link-header'>Features</div>
-					<nav>
-						<ul className='footer-link-list'>
+				<div className='footer-sitemap'>
+					<div className='footer-sitemap-column'>
+						<h3 className='footer-link-header'>Features</h3>
+						<ul className='footer-link-body'>
 							<li className='footer-link-text'>
-								<a href='/'>Link Shortening</a>
+								<a href='/' className=''>
+									Link Shortening
+								</a>
 							</li>
 							<li className='footer-link-text'>
-								<a href='/'>Branded Links</a>
+								<a href='/' className=''>
+									Branded Links
+								</a>
 							</li>
 							<li className='footer-link-text'>
-								<a href='/'>Analytics</a>
+								<a href='/' className=''>
+									Analytics
+								</a>
+							</li>
+						</ul>
+					</div>
+					<nav className='footer-sitemap-column'>
+						<h3 className='footer-link-header'>Resources</h3>
+						<ul className='footer-link-body'>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Blog
+								</a>
+							</li>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Developers
+								</a>
+							</li>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Support
+								</a>
 							</li>
 						</ul>
 					</nav>
+					<div className='footer-sitemap-column'>
+						<h3 className='footer-link-header'>Company</h3>
+						<ul className='footer-link-body'>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									About
+								</a>
+							</li>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Our Team
+								</a>
+							</li>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Careers
+								</a>
+							</li>
+							<li className='footer-link-text'>
+								<a href='/' className=''>
+									Contact
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-
-				<nav className='footer-social-icons'>
-					<ul>
+				<nav>
+					<ul className='footer-social-icons'>
 						<li>
-							<FacebookIcon></FacebookIcon>
+							<a href='#'>
+								<FacebookIcon className='social-icon'></FacebookIcon>
+							</a>
 						</li>
 						<li>
-							<InstagramIcon></InstagramIcon>
+							<a href='#'>
+								<InstagramIcon className='social-icon'></InstagramIcon>
+							</a>
 						</li>
 						<li>
-							<PintrestIcon></PintrestIcon>
+							<a href='#'>
+								<PintrestIcon className='social-icon'></PintrestIcon>
+							</a>
 						</li>
 						<li>
-							<TwitterIcon></TwitterIcon>
+							<a href='#'>
+								<TwitterIcon className='social-icon'></TwitterIcon>
+							</a>
 						</li>
 					</ul>
 				</nav>

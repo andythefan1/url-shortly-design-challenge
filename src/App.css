@@ -14,6 +14,10 @@ footer {
 	max-width: 144rem;
 }
 
+footer {
+	background-color: var(--var-violet-darkest);
+}
+
 section.landing {
 	height: 66.4rem;
 	position: relative;

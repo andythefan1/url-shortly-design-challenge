@@ -5,27 +5,27 @@ import './styles.css';
 
 export const Header = () => {
 	return (
-		<nav className='nav-bar'>
-			<ul className='nav-link-list'>
+		<nav className='header'>
+			<ul className='nav-bar'>
 				<Logo></Logo>
 				<li>
-					<a className='nav-link' href='/'>
+					<a className='' href='/'>
 						Features
 					</a>
 				</li>
 				<li>
-					<a className='nav-link' href='/'>
+					<a className='' href='/'>
 						Pricing
 					</a>
 				</li>
-				<a className='nav-link' href='/'>
+				<a className='' href='/'>
 					Resources
 				</a>
 			</ul>
 
-			<ul className='nav-link-list'>
+			<ul className='nav-bar'>
 				<li>
-					<a className='nav-link' href='/'>
+					<a className='' href='/'>
 						Login
 					</a>
 				</li>

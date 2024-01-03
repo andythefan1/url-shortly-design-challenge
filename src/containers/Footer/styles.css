@@ -1,3 +1,69 @@
-footer {
-	background-color: var(--var-violet-darkest);
+.footer {
+	padding: 7.2rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
+
+	a {
+		color: var(--var-gray);
+	}
+	a:active,
+	a:hover {
+		color: var(--var-cyan);
+	}
+
+	a.inverted:active,
+	a.inverted:hover {
+		color: var(--var-cyan);
+	}
+}
+
+.footer-links {
+	display: flex;
+	flex-direction: row;
+	column-gap: 10rem;
+	justify-content: space-between;
+}
+
+.footer-link-body {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.1rem;
+}
+
+.footer-sitemap {
+	display: flex;
+	flex-direction: row;
+	column-gap: 7.8rem;
+	font-size: 1.5rem;
+}
+
+.footer-sitemap-column {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.2rem;
+}
+
+Footer h3 {
+	font-size: 1.6rem;
+	letter-spacing: -0.25px;
+	color: var(--var-white);
+}
+
+.footer-social-icons {
+	display: flex;
+	flex-direction: row;
+	column-gap: 2.4rem;
+}
+
+.social-icon path {
+	fill: var(--var-white);
+}
+
+.social-icon:hover path,
+.social-icon:active path,
+.social-icon:visited path,
+.social-icon:focus path {
+	fill: var(--var-cyan);
 }
