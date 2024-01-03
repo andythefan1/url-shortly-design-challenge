@@ -112,11 +112,6 @@ section.call-to-action {
 	padding: 1.8rem 3.2rem;
 }
 
-nav {
-	display: flex;
-	font-weight: 700;
-}
-
 .landing-background {
 	position: absolute;
 	top: 3rem;
