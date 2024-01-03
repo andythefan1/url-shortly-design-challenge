@@ -2,12 +2,16 @@ import { useShortenURL } from '../../hooks/useShortenURL';
 import { useShortenedURLs } from '../../hooks/useShortenedURLs';
 import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
-import { Logo } from '../../components/Logo';
 import { Button } from '../../components/Button';
 import { Header } from '../Header';
 import { Hero } from '../Hero';
+import { Footer } from '../Footer';
 
+import { ReactComponent as RecognitionIcon } from '../../assets/icons/icon-brand-recognition.svg';
+import { ReactComponent as RecordsIcon } from '../../assets/icons/icon-detailed-records.svg';
+import { ReactComponent as CustomizableIcon } from '../../assets/icons/icon-fully-customizable.svg';
 import { ReactComponent as LandingBackground } from '../../assets/illustration-working.svg';
+import { InfoCard } from '../../components/InfoCard';
 
 export const Shortly = () => {
 	const { url, setURL, error, fetchShortenedURL } = useShortenURL();
@@ -64,7 +68,7 @@ export const Shortly = () => {
 					</div>
 				</section>
 				<section className='shorten-url'>
-					<div className='shorten-url container-centered'>
+					<div className='shorten-url-container container-centered'>
 						<ShortenURLForm
 							onChange={handleURLInput}
 							onSubmit={handleSubmitURL}
@@ -81,72 +85,56 @@ export const Shortly = () => {
 									onClick={handleCopyURL}
 								></ShortenedURLCard>
 							))}
-							<Button onClick={handleClearAllURLs}>clear all</Button>
+							<Button onClick={handleClearAllURLs}>Clear All</Button>
 						</div>
 					</div>
 				</section>
 				<section className='more-info'>
-					<div className='container-centered'>
-						<h2>Advanced Statistics</h2>
-						<p>
-							Track how your links are performing across the web with our
-							advanced statistics dashboard.
-						</p>
+					<div className='more-info-container container-centered'>
+						<div className='more-info-title'>
+							<h2>Advanced Statistics</h2>
+							<p className='more-info-description'>
+								Track how your links are performing across the web with our
+								advanced statistics dashboard.
+							</p>
+						</div>
 						<div className='more-info-cards'>
-							<div className='more-info-card'>
-								<h3 className='more-info-card-header'>Brand Recognition</h3>
-								<p className='more-info-card-text'>
+							<InfoCard header='Brand Recognition' Icon={RecognitionIcon}>
+								<p>
 									Boost your brand recognition with each click. Generic links
 									don’t mean a thing. Branded links help instil confidence in
 									your content.
 								</p>
-							</div>
-							<div className='more-info-card'>
-								<h3 className='more-info-card-header'>Detailed Records</h3>
-								<p className='more-info-card-text'>
-									Boost your brand recognition with each click. Generic links
-									don’t mean a thing. Branded links help instil confidence in
-									your content.
+							</InfoCard>
+							<InfoCard header='Detailed Records' Icon={RecordsIcon}>
+								<p>
+									Gain insights into who is clicking your links. Knowing when
+									and where people engage with your content helps inform better
+									decisions.
 								</p>
-							</div>
-							<div className='more-info-card'>
-								<h3 className='more-info-card-header'>Fully Customizable</h3>
-								<p className='more-info-card-text'>
+							</InfoCard>
+
+							<InfoCard header='Fully Customizable' Icon={CustomizableIcon}>
+								<p>
 									Improve brand awareness and content discoverability through
 									customizable links, supercharging audience engagement.
 								</p>
-							</div>
+							</InfoCard>
 						</div>
 					</div>
 				</section>
 				<section className='call-to-action'>
-					<div className='container-centered'>
-						<h2>Boost your links today</h2>
-						<Button isRounded>Get Started</Button>
+					<div className='call-to-action-container container-centered'>
+						<h2 className='inverted'>Boost your links today</h2>
+						<Button isRounded isPrimary>
+							Get Started
+						</Button>
 					</div>
 				</section>
 			</main>
 			<footer>
 				<div className='container-centered'>
-					<Logo inverse />
-					<div className='footer-links'>
-						<div className='footer-link-col'>
-							<div className='footer-link-header'>Features</div>
-							<nav>
-								<ul className='footer-link-list'>
-									<li className='footer-link-text'>
-										<a href='/'>Link Shortening</a>
-									</li>
-									<li className='footer-link-text'>
-										<a href='/'>Branded Links</a>
-									</li>
-									<li className='footer-link-text'>
-										<a href='/'>Analytics</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
+					<Footer></Footer>
 				</div>
 			</footer>
 		</div>

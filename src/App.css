@@ -14,10 +14,6 @@ footer {
 	max-width: 144rem;
 }
 
-footer {
-	background-color: var(--var-violet-darkest);
-}
-
 section.landing {
 	height: 66.4rem;
 	position: relative;
@@ -28,8 +24,9 @@ section.shorten-url {
 	background-color: var(--var-blue-light);
 }
 
-.shorten-url.container-centered {
-	transform: translateY(-25%);
+.shorten-url-container {
+	transform: translateY(-7.9rem);
+	padding-bottom: 4.1rem;
 	display: flex;
 	flex-direction: column;
 	row-gap: 2.4rem;
@@ -40,9 +37,17 @@ section.more-info {
 }
 
 section.call-to-action {
-	background-color: var(--var-violet);
+	background-color: var(--var-violet-dark);
 	background-repeat: repeat-x;
 	background-image: url('/src/assets/bg-boost-desktop.svg');
+}
+
+.call-to-action-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3.2rem;
+	align-items: center;
+	padding: 5.7rem 0;
 }
 
 .container-centered {
@@ -50,15 +55,42 @@ section.call-to-action {
 	max-width: 1110px;
 }
 
-/* .grid {
-	display: grid;
+.more-info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 10rem;
 }
 
-.grid--2-cols {
-	grid-template-columns: repeat(2, 1fr);
-} */
+.more-info-title {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.8rem;
+	text-align: center;
+}
 
-/* COMPONENTS */
+.more-info-description {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 0.123px;
+	line-height: 3.2rem;
+	max-width: 54rem;
+}
+
+.more-info-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 20.8rem;
+}
+
+.info-card:nth-child(2) {
+	top: 4.4rem;
+}
+.info-card:nth-child(3) {
+	top: 8.8rem;
+}
+/* SECTIONS */
 
 /* GENERAL STYLES */
 

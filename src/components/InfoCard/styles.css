@@ -1,0 +1,29 @@
+.info-card {
+	max-width: 35rem;
+	background-color: var(--var-white);
+	padding: 7.7rem 3.2rem 4rem 3.2rem;
+	position: relative;
+	flex: 0 1 29rem;
+}
+
+.info-card-header {
+	padding-bottom: 1.2rem;
+}
+
+.info-card-description {
+	font-size: 1.5rem;
+	line-height: 2.6rem;
+	font-weight: 500;
+}
+
+.info-card-icon {
+	background-color: var(--var-violet);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 8.8rem;
+	height: 8.8rem;
+	border-radius: 50px;
+	position: absolute;
+	top: -4.4rem;
+}
