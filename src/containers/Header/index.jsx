@@ -30,7 +30,7 @@ export const Header = () => {
 					</a>
 				</li>
 				<li>
-					<Button isRounded>Sign up</Button>
+					<Button isRounded>Sign Up</Button>
 				</li>
 			</ul>
 		</nav>

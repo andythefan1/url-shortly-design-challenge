@@ -5,24 +5,16 @@
 
 	display: flex;
 	justify-content: space-between;
+}
 
-	a {
-		color: var(--var-violet-greyish);
-	}
+a {
+	color: var(--var-violet-grey);
+}
 
-	a.inverted:active,
-	a.inverted:hover,
-	a.inverted:visted,
-	a.inverted:focus {
-		color: var(--var-blue-dark);
-	}
-
-	a.inverted:active,
-	a.inverted:hover,
-	a.inverted:visted,
-	a.inverted:focus {
-		color: var(--var-white);
-	}
+a:hover,
+a:active,
+a:focus {
+	color: var(--var-blue-dark);
 }
 
 .nav-bar {

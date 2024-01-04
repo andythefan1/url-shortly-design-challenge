@@ -1,12 +1,21 @@
 .shorten-url-card {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 3.6rem;
+	letter-spacing: 0.15px;
+}
+
+.shorten-url-card-header {
 	font-size: 2rem;
 }
 
 .shorten-url-card-body {
 	display: flex;
 	column-gap: 2.4rem;
+	align-items: center;
 }
 
 .shorten-url-card-body .button {

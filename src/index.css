@@ -51,8 +51,8 @@ html {
 
 	/* neutrals */
 	--var-white: hsl(0, 0%, 100%);
-	--var-gray: hsl(0, 0%, 75%);
-	--var-violet-greyish: hsl(257, 8%, 63%);
+	--var-grey: hsl(0, 0%, 75%);
+	--var-violet-grey: hsl(257, 8%, 63%);
 
 	/* tints 
     - button (hover)
@@ -74,21 +74,10 @@ html {
 
 a,
 a:visited,
+a:hover,
 a:active,
 a:focus {
-	color: var(--var-violet-greyish);
 	text-decoration: none;
-}
-
-a.inverted,
-a:visited.inverted,
-a:active.inverted,
-a.inverted:focus {
-	color: var(--var-white);
-}
-
-button {
-	font-size: inherit;
 }
 
 ul,
@@ -124,6 +113,11 @@ h3 {
 	font-size: 2.2rem;
 }
 
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
 .inverted {
 	color: var(--var-white);
 }
@@ -131,5 +125,5 @@ h3 {
 p {
 	margin: 0;
 	padding: 0;
-	color: var(--var-violet-greyish);
+	color: var(--var-violet-grey);
 }

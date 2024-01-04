@@ -6,7 +6,7 @@
 	align-items: start;
 
 	a {
-		color: var(--var-gray);
+		color: var(--var-grey);
 	}
 	a:active,
 	a:hover {
