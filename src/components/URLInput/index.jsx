@@ -10,7 +10,7 @@ export const URLInput = ({ value, label, placeholder, isError, onChange }) => {
 				value={value}
 				placeholder={placeholder}
 			></input>
-			{label}
+			<div className='url-input-label-text'>{label}</div>
 		</label>
 	);
 };

@@ -15,14 +15,25 @@
 
 .url-input.error {
 	color: var(--var-red);
-	border: 1px solid var(--var-red);
+	border: 2px solid var(--var-red);
 }
 
 .url-input-label {
 	display: flex;
 	flex: 1 1;
+	position: relative;
 }
 
 .url-input-label.error {
 	color: var(--var-red);
+}
+
+.url-input-label-text {
+	position: absolute;
+	bottom: -2.4rem;
+	font-size: 1.6rem;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.8rem;
+	letter-spacing: 0.109px;
 }
