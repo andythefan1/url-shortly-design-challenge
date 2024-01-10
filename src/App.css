@@ -1,10 +1,22 @@
-/* LAYOUT */
+/* MOBILE (375px / 16px = 23.4375) */
+@media (max-width: 23.44em) {
+	.container-centered {
+		width: 100%;
+		padding: 0 2.4rem;
+	}
+
+	main,
+	footer {
+		display: none;
+	}
+}
+
+/* DESKTOP */
 .shortly-app {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	max-width: 144rem;
-	margin: 0 auto;
 	color: var(--var-blue-dark);
 }
 
@@ -18,6 +30,12 @@ footer {
 	background-color: var(--var-violet-darkest);
 }
 
+.container-centered {
+	margin: 0 auto;
+	max-width: 1110px;
+}
+
+/* SECTIONS */
 section.landing {
 	height: 66.4rem;
 	position: relative;
@@ -46,17 +64,32 @@ section.call-to-action {
 	background-image: url('/src/assets/bg-boost-desktop.svg');
 }
 
-.call-to-action-container {
-	display: flex;
-	flex-direction: column;
-	row-gap: 3.2rem;
-	align-items: center;
-	padding: 5.7rem 0;
+/* COMPONENTS */
+.card {
+	background-color: var(--var-white);
+	border-radius: 5px;
+	padding: 1.8rem 3.2rem;
 }
 
-.container-centered {
-	margin: 0 auto;
-	max-width: 1110px;
+.shorten-url-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.6rem;
+}
+
+.more-info-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 20.8rem;
+}
+
+.info-card:nth-child(2) {
+	top: 4.4rem;
+}
+
+.info-card:nth-child(3) {
+	top: 8.8rem;
 }
 
 .more-info-container {
@@ -81,45 +114,25 @@ section.call-to-action {
 	max-width: 54rem;
 }
 
-.more-info-cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding-bottom: 20.8rem;
-}
-
-.info-card:nth-child(2) {
-	top: 4.4rem;
-}
-.info-card:nth-child(3) {
-	top: 8.8rem;
-}
-/* SECTIONS */
-
-/* GENERAL STYLES */
-
-.rounded {
-	border-radius: 10px;
-}
-
-.rounded-large {
-	border-radius: 28px;
-}
-
-.card {
-	background-color: var(--var-white);
-	border-radius: 5px;
-	padding: 1.8rem 3.2rem;
-}
-
 .landing-background {
 	position: absolute;
 	top: 3rem;
 	right: -13rem;
 }
 
-.shorten-url-list {
+.call-to-action-container {
 	display: flex;
 	flex-direction: column;
-	row-gap: 1.6rem;
+	row-gap: 3.2rem;
+	align-items: center;
+	padding: 5.7rem 0;
+}
+
+/* GENERAL STYLES */
+.rounded {
+	border-radius: 10px;
+}
+
+.rounded-large {
+	border-radius: 28px;
 }

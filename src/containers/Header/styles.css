@@ -29,3 +29,14 @@ a:focus {
 .nav-bar .logo {
 	padding-right: 1.2rem;
 }
+
+/* MOBILE (375px / 16px = 23.4375) */
+@media (max-width: 23.44em) {
+	.nav-bar .nav-link {
+		display: none;
+	}
+
+	.header {
+		padding: 4rem 0;
+	}
+}

@@ -31,10 +31,17 @@
 - [Ionicons](https://ionicons.com)
 */
 
-html {
-	margin: 0;
-	padding: 0;
+* {
 	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -72,11 +79,17 @@ html {
 	font-size: 62.5%;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 a,
 a:visited,
 a:hover,
 a:active,
 a:focus {
+	cursor: pointer;
 	text-decoration: none;
 }
 

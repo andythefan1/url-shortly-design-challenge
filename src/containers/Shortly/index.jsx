@@ -2,6 +2,7 @@ import { useShortenURL } from '../../hooks/useShortenURL';
 import { useShortenedURLs } from '../../hooks/useShortenedURLs';
 import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
+import { NavMenu } from '../NavMenu';
 import { Button } from '../../components/Button';
 import { Header } from '../Header';
 import { Hero } from '../Hero';
@@ -50,11 +51,11 @@ export const Shortly = () => {
 		}
 	};
 
-	console.log('shortenedURLs: ', shortenedURLs);
 	return (
 		<div className='shortly-app'>
 			<header>
 				<div className='container-centered'>
+					<NavMenu></NavMenu>
 					<Header></Header>
 				</div>
 			</header>
