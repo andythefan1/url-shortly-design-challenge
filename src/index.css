@@ -30,15 +30,10 @@
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com)
 */
-
-* {
-	box-sizing: border-box;
-}
-
 *,
-*:before,
-*:after {
-	box-sizing: inherit;
+*:after,
+*:before {
+	box-sizing: border-box;
 }
 
 html {
@@ -126,6 +121,14 @@ h3 {
 	font-size: 2.2rem;
 }
 
+hr {
+	margin: 0;
+
+	display: none;
+	width: 100%;
+	border: 1px solid var(--var-blue-light);
+}
+
 button {
 	font-family: inherit;
 	font-size: inherit;
@@ -139,4 +142,11 @@ p {
 	margin: 0;
 	padding: 0;
 	color: var(--var-violet-grey);
+}
+
+/* LARGE MOBILE/TABLET (768px / 16px = 48em) */
+@media (max-width: 48em) {
+	h2 {
+		font-size: 2.8rem;
+	}
 }

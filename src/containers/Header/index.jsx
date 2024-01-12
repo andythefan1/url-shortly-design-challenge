@@ -4,7 +4,7 @@ import { ReactComponent as MenuIcon } from '../../assets/icons/icon-hamburger-me
 
 import './styles.css';
 
-export const Header = () => {
+export const Header = ({ onClickNavMenu }) => {
 	return (
 		<nav className='header'>
 			<ul className='nav-bar'>
@@ -35,7 +35,7 @@ export const Header = () => {
 					<Button isRounded>Sign Up</Button>
 				</li>
 				<li className=''>
-					<MenuIcon></MenuIcon>
+					<MenuIcon onClick={onClickNavMenu}></MenuIcon>
 				</li>
 			</ul>
 		</nav>

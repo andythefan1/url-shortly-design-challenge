@@ -26,6 +26,7 @@
 
 .url-input-label.error {
 	color: var(--var-red);
+	margin-bottom: 1.2rem;
 }
 
 .url-input-label-text {

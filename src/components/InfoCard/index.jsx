@@ -1,7 +1,7 @@
 import './styles.css';
 export const InfoCard = ({ header, children, Icon }) => {
 	return (
-		<div className='info-card'>
+		<div className='card info-card'>
 			<div className='info-card-icon'>
 				<Icon></Icon>
 			</div>

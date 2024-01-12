@@ -7,7 +7,7 @@ export const Button = ({
 	isDisabled,
 	children,
 }) => {
-	let classList = 'button ';
+	let classList = '';
 	if (isPrimary) {
 		classList += 'primary ';
 	}

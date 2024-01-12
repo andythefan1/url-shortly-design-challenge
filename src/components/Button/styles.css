@@ -19,7 +19,10 @@ button:hover {
 
 button:active,
 button:focus,
-button:hover,
-:disabled {
+button:hover {
 	background-color: var(--var-cyan-light);
+}
+
+button:disabled {
+	background-color: var(--var-violet-dark);
 }

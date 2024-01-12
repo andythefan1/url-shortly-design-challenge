@@ -2,11 +2,12 @@ import { useShortenURL } from '../../hooks/useShortenURL';
 import { useShortenedURLs } from '../../hooks/useShortenedURLs';
 import { ShortenURLForm } from '../../components/ShortenURLForm';
 import { ShortenedURLCard } from '../../components/ShortenedURLCard';
-import { NavMenu } from '../NavMenu';
+import { MobileNavMenu } from '../MobileNavMenu';
 import { Button } from '../../components/Button';
 import { Header } from '../Header';
 import { Hero } from '../Hero';
 import { Footer } from '../Footer';
+import { useState } from 'react';
 
 import { ReactComponent as RecognitionIcon } from '../../assets/icons/icon-brand-recognition.svg';
 import { ReactComponent as RecordsIcon } from '../../assets/icons/icon-detailed-records.svg';
@@ -17,6 +18,8 @@ import { InfoCard } from '../../components/InfoCard';
 export const Shortly = () => {
 	const { url, setURL, error, fetchShortenedURL } = useShortenURL();
 	const { shortenedURLs, setShortenedURLs } = useShortenedURLs();
+
+	const [toggleMobileNav, setToggleMobileNav] = useState(false);
 
 	const handleURLInput = (e) => {
 		const URLInput = e.target.value;
@@ -39,7 +42,7 @@ export const Shortly = () => {
 		setShortenedURLs([]);
 	};
 
-	const handleCopyURL = async (value) => {
+	const handleClickCopy = async (value) => {
 		try {
 			if (value.length > 0) {
 				await navigator.clipboard.writeText(value);
@@ -51,12 +54,16 @@ export const Shortly = () => {
 		}
 	};
 
+	const handleToggleMobileNav = () => {
+		setToggleMobileNav(!toggleMobileNav);
+	};
+
 	return (
 		<div className='shortly-app'>
 			<header>
 				<div className='container-centered'>
-					<NavMenu></NavMenu>
-					<Header></Header>
+					<Header onClickNavMenu={handleToggleMobileNav}></Header>
+					<MobileNavMenu isOpen={toggleMobileNav}></MobileNavMenu>
 				</div>
 			</header>
 			<main>
@@ -83,10 +90,12 @@ export const Shortly = () => {
 									key={i}
 									header={shortenedURL.originalURL}
 									body={shortenedURL.shortURL}
-									onClick={handleCopyURL}
+									onClick={handleClickCopy}
 								></ShortenedURLCard>
 							))}
-							<Button onClick={handleClearAllURLs}>Clear All</Button>
+							{shortenedURLs.length > 0 && (
+								<Button onClick={handleClearAllURLs}>Clear All</Button>
+							)}
 						</div>
 					</div>
 				</section>

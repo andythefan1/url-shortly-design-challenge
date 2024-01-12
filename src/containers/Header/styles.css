@@ -27,16 +27,18 @@ a:focus {
 }
 
 .nav-bar .logo {
-	padding-right: 1.2rem;
+	margin-right: 1.5rem;
 }
 
-/* MOBILE (375px / 16px = 23.4375) */
-@media (max-width: 23.44em) {
+/* MOBILE (425px / 16px = 26.56em) */
+
+/* LARGE MOBILE/TABLET (768px / 16px = 48em) */
+@media (max-width: 48em) {
 	.nav-bar .nav-link {
 		display: none;
 	}
 
 	.header {
-		padding: 4rem 0;
+		padding: 4rem 0 0 0;
 	}
 }
