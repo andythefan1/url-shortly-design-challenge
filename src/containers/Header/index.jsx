@@ -34,7 +34,7 @@ export const Header = ({ onClickNavMenu }) => {
 				<li className='nav-link'>
 					<Button isRounded>Sign Up</Button>
 				</li>
-				<li className=''>
+				<li className='nav-menu'>
 					<MenuIcon onClick={onClickNavMenu}></MenuIcon>
 				</li>
 			</ul>

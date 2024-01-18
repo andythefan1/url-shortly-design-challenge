@@ -17,7 +17,6 @@ footer {
 
 /* SECTIONS */
 section.landing {
-	height: 66.4rem;
 	position: relative;
 	overflow: hidden;
 }
@@ -74,6 +73,7 @@ section.call-to-action {
 	flex-direction: column;
 	row-gap: 1.8rem;
 	text-align: center;
+	align-items: center;
 }
 
 .more-info-description {
@@ -85,9 +85,11 @@ section.call-to-action {
 }
 
 .landing-background {
+	width: 73.3rem;
 	position: absolute;
 	top: 3rem;
-	right: -13rem;
+	right: -12rem;
+	z-index: -1;
 }
 
 .call-to-action-container {
@@ -120,12 +122,21 @@ section.call-to-action {
 
 /* LARGE MOBILE/TABLET (768px / 16px = 48em) */
 @media (max-width: 48em) {
+	.landing-background {
+		position: relative;
+		width: 134%;
+		left: 2rem;
+		padding-bottom: 4.4rem;
+	}
+
+	section.landing {
+	}
+
 	.card {
 		padding: 0.6rem 1.6rem 1.6rem 1.6rem;
 	}
 
 	.call-to-action-container {
-		padding: 9rem 0;
 	}
 
 	.more-info-cards {

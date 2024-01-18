@@ -1,4 +1,5 @@
 import { Button } from '../../components/Button';
+import { ReactComponent as LandingBackground } from '../../assets/illustration-working.svg';
 
 import './styles.css';
 
@@ -15,7 +16,6 @@ export const Hero = () => {
 					Get Started
 				</Button>
 			</div>
-			<div className='hero-aside'></div>
 		</div>
 	);
 };

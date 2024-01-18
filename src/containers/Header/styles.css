@@ -30,12 +30,20 @@ a:focus {
 	margin-right: 1.5rem;
 }
 
+.nav-menu {
+	display: none;
+}
+
 /* MOBILE (425px / 16px = 26.56em) */
 
 /* LARGE MOBILE/TABLET (768px / 16px = 48em) */
 @media (max-width: 48em) {
 	.nav-bar .nav-link {
 		display: none;
+	}
+
+	.nav-menu {
+		display: inherit;
 	}
 
 	.header {

@@ -2,6 +2,8 @@
 	padding: 1.4rem 3.2rem;
 	font-size: 2rem;
 	flex: 1 0 auto;
+	line-height: 3.6rem;
+	letter-spacing: 0.15px;
 }
 
 .url-input::placeholder {
@@ -37,4 +39,15 @@
 	font-weight: 500;
 	line-height: 1.8rem;
 	letter-spacing: 0.109px;
+}
+
+/* LARGE MOBILE/TABLET (768px / 16px = 48em) */
+@media (max-width: 48em) {
+	.url-input {
+		font-size: 1.6rem;
+		padding: 0.6rem 1.6rem;
+	}
+	.url-input-label-text {
+		font-size: 1.2rem;
+	}
 }
