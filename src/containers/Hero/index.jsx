@@ -1,5 +1,4 @@
 import { Button } from '../../components/Button';
-import { ReactComponent as LandingBackground } from '../../assets/illustration-working.svg';
 
 import './styles.css';
 
